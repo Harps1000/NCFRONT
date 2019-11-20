@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {Router} from "@reach/router"
-import ArticlesList from "./Components/Homepage/ArticleList"
+import ArticlesList from "./Components/Homepage/ArticleList";
+import ArticleCard from "./Components/Homepage/ArticleCard";
+import NavBar from "./Components/NavBar"
 
 
 class App extends Component {
@@ -9,7 +11,14 @@ render(){
   return (
     <div>
     <h1>NC News</h1>
-    <ArticlesList/>
+    <NavBar/>
+    <Router>
+          <ArticlesList path="/"  />
+          <ArticlesList path="/topics/:topic"  />
+          <ArticleCard path="/:article_id" user={this.state.user} />
+        </Router>
+
+
     </div>
   )
 }
