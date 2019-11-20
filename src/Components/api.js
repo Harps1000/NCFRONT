@@ -11,3 +11,8 @@ export const fetchAllArticles = (sort_by, topic) => {
 export const getSingleArticle = article_id => {
     return request(`/articles/${article_id}`);
   }
+
+  export const fetchCommentsByArticle = article_id => {
+    return request.get(`/articles/${article_id}/comments`);
+  };
+  
