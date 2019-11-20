@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ArticleCard from "./ArticleCard";
 import * as api from "../api"
+import ErrorHandler from "../ErrorHandler"; 
 
 class ArticlesList extends Component {
     state = { Articles: null, sortBy: "created_at", err: null}
@@ -8,9 +9,14 @@ class ArticlesList extends Component {
         return(
             <div>
 <h2>List of Articles</h2>
-{this.state.Articles &&
-<ArticleCard articles={this.state.Articles}/>
-}
+
+{this.state.err ? (
+          <ErrorHandler err={this.state.err} />
+        ) : this.state.Articles ? (
+          <ArticleCard articles={this.state.Articles} />
+        ) : (
+          <h1>'Articles coming soon!' </h1>
+        )}
             </div>     
         )
     }

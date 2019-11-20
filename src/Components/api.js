@@ -7,3 +7,7 @@ const request = Axios.create({
 export const fetchAllArticles = (sort_by, topic) => {
     return request.get('/articles', {params: {sort_by, topic}})
 }
+
+export const getSingleArticle = article_id => {
+    return request(`/articles/${article_id}`);
+  }

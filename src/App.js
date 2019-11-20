@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Router} from "@reach/router"
 import ArticlesList from "./Components/Homepage/ArticleList";
-import ArticleCard from "./Components/Homepage/ArticleCard";
+import Article from "./Components/SinglePage/SinglePage"
 import NavBar from "./Components/NavBar"
 
 
@@ -15,7 +15,7 @@ render(){
     <Router>
           <ArticlesList path="/"  />
           <ArticlesList path="/topics/:topic"  />
-          <ArticleCard path="/:article_id" user={this.state.user} />
+          <Article path="/:article_id" user={this.state.user} />
         </Router>
 
 
