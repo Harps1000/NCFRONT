@@ -15,4 +15,8 @@ export const getSingleArticle = article_id => {
   export const fetchCommentsByArticle = article_id => {
     return request.get(`/articles/${article_id}/comments`);
   };
+
+  export const patchArticleVotes = (votes, article_id, url) => {
+    return request.patch(`${url}${article_id}`, { inc_votes: votes });
+  };
   

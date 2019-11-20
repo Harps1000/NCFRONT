@@ -20,9 +20,7 @@ class Article extends Component {
           <p>{this.state.Article.article.author}</p>
           <Comments article_id={this.props.article_id} user={this.props.user} class='comments'/>
           </div>) : <h1>Coming Soon</h1>
-    
-
-   
+     
    
      ) }
 
