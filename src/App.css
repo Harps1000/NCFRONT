@@ -1,22 +1,179 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+.delete-button {
+  position: relative;
+  left: 50px;
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.article-card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1rem;
+  padding-bottom: 5px
+
 }
 
-.App-link {
-  color: #09d3ac;
+
+.error {
+  font-size: 50px;
+  height: 50%;
+  text-align: center;
+  padding-bottom: 10em
+}
+
+.form {
+  display: flex
+  
+  
+}
+
+
+
+
+.homepage-list {
+  list-style: none;
+  border: 2px solid red;
+  text-align: center;
+  background-color: royalblue;
+  width: 80%;
+  margin: auto;
+  color: red;
+}
+#root {
+  color: royalblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.main-container {
+  background-color: rgba(33, 33, 33, 0.3);
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  
+
+  
+  
+}
+
+
+
+
+
+textarea{
+  position: relative;
+  top: 8px
+}
+
+.user {
+  text-align: right;
+}
+
+
+
+.comments {
+ 
+  position: relative;
+  top: 50px;
+  border: 2px solid purple;
+}
+.NavBar {
+  text-align: center;
+  text-decoration: none;
+  color: darkblue;
+}
+
+ul li:nth-child(even) {
+  background-color:oldlace;
+  
+}
+
+ul li:nth-child(odd) {
+  background-color: rgba(255, 166, 0, 0.5);
+  
+}
+
+
+
+
+
+
+
+
+.article-name{
+  color: darkblue;
+  font-size: 1em
+}
+
+ul li div {
+  color: darkblue
+  
+}
+
+.user{
+  position: relative;
+  right: 30px;
+  font-size: 17.5px
+}
+
+.link {
+  color: darkblue;
+}
+
+.article-part-1{
+  display: flex;
+  flex-direction: column;
+  padding-right: 6px
+}
+
+.article-part-2{
+  display: flex;
+  flex-direction: column;
+  padding-left: 6px
+}
+.home-header {
+  text-align: center;
+  font-size: 60px;
+  
+}
+.article-description{
+  display: flex;
+  justify-content: center
+}
+
+
+
+
+
+.article-page{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column
+}
+
+.post-button{
+  align-self: flex-end
+}
+
+.like-button {
+  background-color: green;
+}
+
+.dislike-button {
+  position: relative;
+  left: 10px;
+  background-color: orange;
 }

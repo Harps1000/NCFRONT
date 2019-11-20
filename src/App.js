@@ -1,3 +1,4 @@
+import "./App.css";
 import React, { Component } from "react";
 import {Router} from "@reach/router"
 import ArticlesList from "./Components/Homepage/ArticleList";
