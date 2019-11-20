@@ -1,5 +1,6 @@
 import React from "react";
 import VotesHandler from "../VotesHandler"
+import DeleteComment from './DeleteComment'
 
 const CommentCard = ({comments, removeComment, user}) => {
   return (
@@ -8,11 +9,15 @@ const CommentCard = ({comments, removeComment, user}) => {
       {comments.map(comment => {
         return (
           <li key={comment.comment_id}>
-      
-          <p>{comment.body} </p>
-                     
+            
+              
+              <p>{comment.body} </p>
+            
+            
             <p>Author: {comment.author} </p>
             <VotesHandler votes={comment.votes} article_id={comment.comment_id} url="/comments/"/>
+            {comment.author === user && <DeleteComment removeComment={removeComment}
+            id={comment.comment_id}/> }
 
           </li>
         );

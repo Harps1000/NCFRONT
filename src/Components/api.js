@@ -20,3 +20,15 @@ export const getSingleArticle = article_id => {
     return request.patch(`${url}${article_id}`, { inc_votes: votes });
   };
   
+
+export const postComment = (id, body, user) => {
+    return request.post(`/articles/${id}/comments`, {
+      username: user,
+      body: body
+    });
+  };
+
+  export const deleteComment = id => {
+    return request.delete(`/comments/${id}`);
+  };
+  

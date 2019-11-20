@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../api";
 import CommentCard from "./CommentCard"
+import PostComment from "./PostComment"
 
 
 class Comments extends Component {
@@ -10,13 +11,17 @@ class Comments extends Component {
     
     return (
       <>
-        
+             <PostComment
+          addComment={this.addComment}
+          id={this.props.article_id}
+          user={this.props.user}
+        />
     
         
         {this.state.comments &&  <CommentCard
-            
             comments={this.state.comments}
-              user={this.props.user}
+            removeComment={this.removeComment}
+            user={this.props.user}
           />}
 
         
@@ -33,6 +38,21 @@ class Comments extends Component {
     });
   };
 
+
+  addComment = newComment => {
+    this.setState(currentState => {
+      return { comments: [newComment, ...currentState.comments] };
+    });
+  };
+  removeComment = commentID => {
+    this.setState((currentState) => {
+      return {
+        comments: currentState.comments.filter(comment => {
+          return comment.comment_id !== commentID;
+        })
+      };
+    });
+  };
  
 }
 
