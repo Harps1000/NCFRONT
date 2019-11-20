@@ -22,6 +22,7 @@ export const getSingleArticle = article_id => {
   
 
 export const postComment = (id, body, user) => {
+    console.log(id + body + user)
     return request.post(`/articles/${id}/comments`, {
       username: user,
       body: body

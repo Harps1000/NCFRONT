@@ -26,8 +26,14 @@ class PostComment extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log(this.state.body)
     api.postComment(this.props.id,this.state.body, this.props.user).then((comment)=>
-    {this.props.addComment(comment.data.comment)})
+   
+    {
+        console.log(comment)
+        this.props.addComment(comment.data.comment)}
+    
+    ).catch(console.log)
     this.setState({body:""})
     };
 }

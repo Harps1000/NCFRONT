@@ -6,7 +6,7 @@ import NavBar from "./Components/NavBar"
 
 
 class App extends Component {
-state={}
+  state = { user: "jessjelly" };
 render(){
   return (
     <div>
