@@ -8,7 +8,7 @@ class NavBar extends Component {
         <Link className="link" to="/">
           Home
         </Link>
-        <h3>View by topic:</h3>
+
         <Link className="link" to="/topics/football">
           Football
           <br />

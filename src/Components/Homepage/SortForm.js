@@ -4,7 +4,7 @@ class SortForm extends Component {
   state = { value: "created_at" }; 
   render() { 
     return (
-      <form
+      <form className ="form"
         onSubmit={e => {
           this.props.handleSubmit(e, this.state.value);
         }}

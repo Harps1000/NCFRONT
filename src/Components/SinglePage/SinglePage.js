@@ -3,6 +3,7 @@ import ErrorHandler from '../ErrorHandler';
 import * as api from '../api';
 import Comments from "./CommentList"
 import VotesHandler from "../VotesHandler"
+import { Link } from "@reach/router"
 
 class Article extends Component {
   state = {
@@ -11,22 +12,26 @@ class Article extends Component {
   };
 
   render() {
+
     return (
-      
-      this.state.err ? <ErrorHandler err = {this.state.err}/> :
+      <div>
+         <Link className="link" to="/">
+          Back to Home
+        </Link>
+      {this.state.err ? <ErrorHandler err = {this.state.err}/> :
       this.state.Article ? (
         <div>
-          <h2>{this.state.Article.title}</h2>
-          <p>{this.state.Article.article.body}</p>
-          <p>{this.state.Article.article.author}</p>
+          <h1 className="title">{this.state.Article.article.title}</h1>
+          <p className = "body">{this.state.Article.article.body}</p>
+          <p>Author: {" " + this.state.Article.article.author}</p>
           <VotesHandler class='votes-handler'
             votes={this.state.Article.article.votes}
             article_id={this.props.article_id}
             url="/articles/"
           /> 
           <Comments article_id={this.props.article_id} user={this.props.user} class='comments'/>
-          </div>) : <h1>Coming Soon</h1>
-     
+          </div>) : <h1>Coming Soon</h1>}
+          </div>
    
      ) }
 
@@ -36,6 +41,7 @@ class Article extends Component {
 
   componentDidMount() {
     this.fetchArticle()
+ 
   }
 }
 

@@ -3,17 +3,24 @@ import ArticleCard from "./ArticleCard";
 import * as api from "../api"
 import ErrorHandler from "../ErrorHandler"; 
 import SortForm from "./SortForm"
+import Header from "./Header"
+import NavBar from "../NavBar"
 
 class ArticlesList extends Component {
     state = { Articles: null, sortBy: "created_at", err: null}
     render(){
         return(
             <div>
-<h3>Sort By:</h3>   
-        <SortForm
+              <NavBar />
+              <Header/>
+              
+<h2>Check out our {this.props.topic} articles</h2>
+<SortForm 
           handleSubmit={this.handleSortSubmit}
           default={this.state.sortBy}
         />
+
+        
 
 {this.state.err ? (
           <ErrorHandler err={this.state.err} />
