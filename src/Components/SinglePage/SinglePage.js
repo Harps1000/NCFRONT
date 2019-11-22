@@ -15,20 +15,22 @@ class Article extends Component {
 
     return (
       <div>
-         <Link className="link" to="/">
-          Back to Home
+         <Link className="link NavBar" to="/">
+          <button><strong>Back to Home</strong></button>
         </Link>
       {this.state.err ? <ErrorHandler err = {this.state.err}/> :
       this.state.Article ? (
         <div>
+          
           <h1 className="title">{this.state.Article.article.title}</h1>
-          <p className = "body">{this.state.Article.article.body}</p>
           <p>Author: {" " + this.state.Article.article.author}</p>
           <VotesHandler class='votes-handler'
             votes={this.state.Article.article.votes}
             article_id={this.props.article_id}
             url="/articles/"
           /> 
+          <p className = "body">{this.state.Article.article.body}</p>
+          
           <Comments article_id={this.props.article_id} user={this.props.user} class='comments'/>
           </div>) : <h1>Coming Soon</h1>}
           </div>

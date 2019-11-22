@@ -26,15 +26,17 @@ class PostComment extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state.body)
+   if(this.state.body===""){return console.log("empty")}
+ 
     api.postComment(this.props.id,this.state.body, this.props.user).then((comment)=>
    
     {
-        console.log(comment)
+   
         this.props.addComment(comment.data.comment)}
     
     ).catch(console.log)
     this.setState({body:""})
+  
     };
 }
 

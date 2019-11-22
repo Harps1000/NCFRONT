@@ -1,5 +1,20 @@
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
 .main-container {
-  background-color: #577284;
+  background-color: rgba(0,0,255,0.3);
+  background-image: linear-gradient(to bottom right,whitesmoke, rgba(0,0,255,0.3));
+  
+
+  }
+
+
+  .sort {
+    font-size: 30px;
+  }
+  .form{
+   margin: right;
   }
 
   .user {
@@ -12,12 +27,18 @@
 
 .title{
   text-align: center;
-  font-size: 40px;
+  font-size: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 80%;
+  margin: auto;
+  
 }
 
 .body{
   font-size: 26px;
-  
+  width: 80%;
+  margin: auto;
+ 
 }
 
 #root {
@@ -26,17 +47,25 @@
 
 
 .link {
-  color: #f7f7f7;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 20%;
 }
 
 .comments {
-
+  margin: auto;
+  list-style: none;
+text-align: center;
   position: relative;
   top: 50px;
   border: 2px solid black;
-  width: 40%;
-
-
+  width: 50%;
+  box-sizing: border-box;
+  background-color: rgb(59, 101, 136);
 }
 
 textarea{
@@ -48,6 +77,8 @@ textarea{
   position: relative;
   left: 50px;
   background-color: whitesmoke;
+  border-radius: 15%;
+  padding: 12px 28px;
 }
 
 .post-button{
@@ -56,13 +87,17 @@ textarea{
 
 .like-button {
   background-color: #0074D9;
-  
+  border-radius: 50%;
+  padding: 12px 28px;
 }
 
 .dislike-button {
   position: relative;
   left: 10px;
-  background-color: #FF4136;
+  background-color: rgb(136, 47, 47);
+  opacity: 50%;
+  padding: 12px 28px;
+  border-radius: 15%;
 } 
 
 
@@ -85,30 +120,80 @@ textarea{
 
 
 ul li:nth-child(even) {
-  background-color: #8B9DC3;
-  
+  background-color: rgb(109, 96, 96);
+  border-radius: 10px; 
+  height: auto; 
 }
 
 ul li:nth-child(odd) {
   background-color: #dfe3ee;
-  
+  border-radius: 10px; 
+  height: auto; 
 }
 .homepage-list {
   list-style: none;
-  border: 2px solid black;
-  text-align: center;
  
-  width: 80%;
+  text-align: center;
+  width: 50%;
   margin: auto;
   color: #004883;
+
   
 }
 .NavBar {
-  display: flex;
-  font-size: 30px;
-  justify-content: space-evenly;
-  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 7%;
+  position: fixed;
+  top: 0;
+  border: 1px solid white;
+  border-radius: 20%;
+ 
+ 
 }
+
+
+@media screen and (max-width: 1000px) {
+
+  .dislike-button {
+    position: relative;
+    left: 10px;
+    background-color: rgb(136, 47, 47);
+    opacity: 50%;
+    padding: 11px 18px;
+    border-radius: 15%;
+  } 
+  
+
+  
+  .NavBar {
+    display: flex;
+    list-style-type: none;
+      width: auto;
+    
+  
+
+    border: 1px solid white;
+    border-radius: 20%;
+   
+   
+  }
+
+  .title{
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    
+  }
+
+}
+
 .Headline{
   display: flex;
   flex-direction: column;
@@ -117,21 +202,43 @@ ul li:nth-child(odd) {
 }
 
 .article-description{
-  display: flex;
-  flex-direction: row;
+  
   justify-content: space-around;
   font-size: 15px;
-  padding: -50px;
+
 }
+
+
 
 
 .home-header {
-  background-color: #4285F4;
+  border: 10px solid transparent;
+  background-color: #333;
   color: white;
   text-align: center;
   font-size: 100px;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: -30;
   outline: 0;
+  border: black;
+  border-radius: 25px; 
+  font-family: 'Courier New', Courier, monospace;
+
+  width: 80%;
+  opacity: 0.8;
 }
 
+@media screen and (max-width: 800px) {
+
+  .home-header {
+    width: calc(100% - 40px);
+    font-size: 60px;
+  }
+  .delete-button {
+    position: relative;
+    left: 10px;
+    background-color: whitesmoke;
+    border-radius: 15%;
+    padding: 6px 2px;
+  }
+}

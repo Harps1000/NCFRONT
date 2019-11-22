@@ -10,7 +10,7 @@ class App extends Component {
 render(){
   return (
     <div className="main-container" >
-    <p className="user">logged in as: jessjelly</p>
+    
   
   
     <Router>

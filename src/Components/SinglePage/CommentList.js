@@ -41,7 +41,7 @@ class Comments extends Component {
 
   addComment = newComment => {
     this.setState(currentState => {
-        console.log(newComment)
+      
       return { comments: [newComment, ...currentState.comments] };
     });
   };

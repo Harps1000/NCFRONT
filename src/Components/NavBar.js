@@ -6,20 +6,21 @@ class NavBar extends Component {
     return (
       <nav className="NavBar">
         <Link className="link" to="/">
-          Home
+          All Articles
+         
         </Link>
-
+    
         <Link className="link" to="/topics/football">
           Football
-          <br />
+          
         </Link>
         <Link className="link" to="/topics/coding">
           Coding
-          <br />
+        
         </Link>
         <Link className="link" to="/topics/cooking">
           Cooking
-          <br />
+       
         </Link>
       </nav>
     );

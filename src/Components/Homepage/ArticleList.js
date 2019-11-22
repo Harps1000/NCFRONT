@@ -12,9 +12,11 @@ class ArticlesList extends Component {
         return(
             <div>
               <NavBar />
+              <br></br>
+              <br></br>
               <Header/>
-              
-<h2>Check out our {this.props.topic} articles</h2>
+              <p className="user">logged in as: jessjelly</p>
+<h2 className="sort"> Sort {this.props.topic} articles</h2>
 <SortForm 
           handleSubmit={this.handleSortSubmit}
           default={this.state.sortBy}

@@ -9,6 +9,7 @@ class VotesHandler extends Component {
       <>
         <p>Votes: {this.state.votes + this.state.inc}</p>
         <button
+        
           className="like-button"
           disabled={this.state.inc > 0 ? true : false}
           onClick={() => {
@@ -18,6 +19,7 @@ class VotesHandler extends Component {
           Like
         </button>
         <button
+     
           disabled={this.state.inc < 0 ? true : false}
           onClick={() => {
             this.clickHandler(-1);
@@ -40,6 +42,7 @@ class VotesHandler extends Component {
           return { inc: inc - value };
         });
       });
+      
   };
 }
 
